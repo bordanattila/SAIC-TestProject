@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Grilled Cheese</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Learn and Practice How to Make Grilled Cheese</h1>
+    </header>
+    <div class="container">
+        <div class="inner-container align-start">
+            <h2>Checklist</h2>
+            <form action="">
+                <input type="checkbox" id="step1">
+                <label for="step1">Place skillet on stove.</label><br><br>
+                <input type="checkbox" id="step2">
+                <label for="step2">Preheat skillet over medium heat.</label><br><br>
+                <input type="checkbox" id="step3">
+                <label for="step3">Generously butter one side of a slice of bread.</label><br><br>
+                <input type="checkbox" id="step4">
+                <label for="step4">Place bread butter-side-down onto skillet.</label><br><br>
+                <input type="checkbox" id="step5">
+                <label for="step5">Add 1 slice of cheese.</label><br><br>
+                <input type="checkbox" id="step6">
+                <label for="step6">Butter a second slice of bread on one side and place butter-side-up on top of
+                    sandwich.</label><br><br>
+                <input type="checkbox" id="step7">
+                <label for="step7">Grill until lightly browned and flip over.</label><br><br>
+                <input type="checkbox" id="step8">
+                <label for="step8">Continue grilling until cheese is melted.</label><br><br>
+                <button type="reset">Clear All</button>
+            </form>
+        </div>
+        <div class="inner-container align-start">
+            <h2>Quick Reference</h2>
+            <div class="slideshow-container">
+
+                <div class="slide-show fade">
+                    <div class="number-text">1 / 8</div>
+                    <img src="./assets/01a_pan_off.png" alt="turned off stove with empty pan">
+                    <div class="text">Place skillet on stove.</div>
+                </div>
+
+                <div class="slide-show fade">
+                    <div class="number-text">2 / 8</div>
+                    <img src="./assets/01b_pan_on.png" alt="turned on stove with empty pan">
+                    <div class="text">Preheat skillet over medium heat.</div>
+                </div>
+
+                <div class="slide-show fade">
+                    <div class="number-text">3 / 8</div>
+                    <img src="./assets/02_butter_bread.png" alt="buttered slice of bread on chopping board">
+                    <div class="text">Generously butter one side of a slice of bread.</div>
+                </div>
+
+                <div class="slide-show fade">
+                    <div class="number-text">4 / 8</div>
+                    <img src="./assets/03a_bread_in_pan.png" alt="buttered side down bread in a pan">
+                    <div class="text">Place bread butter-side-down onto skillet.</div>
+                </div>
+
+                <div class="slide-show fade">
+                    <div class="number-text">5 / 8</div>
+                    <img src="./assets/03b_cheese_on_bread.png" alt="cheese added on top of the bread">
+                    <div class="text">Add 1 slice of cheese on top.</div>
+                </div>
+
+                <div class="slide-show fade">
+                    <div class="number-text">6 / 8</div>
+                    <img src="./assets/04_buttered_bread_on_top.png"
+                        alt="second lice of bread with buttered side up placed on cheese">
+                    <div class="text">
+                        Butter a second slice of bread on one side
+                        and place butter-side-up on top of sandwich.
+                    </div>
+                </div>
+
+                <div class="slide-show fade">
+                    <div class="number-text">7 / 8</div>
+                    <img src="./assets/05_flip.png" alt="sandwich flipped over in the pan">
+                    <div class="text">Grill until lightly browned and flip over.</div>
+                </div>
+
+                <div class="slide-show fade">
+                    <div class="number-text">8 / 8</div>
+                    <img src="./assets/06_melted_cheese.png" alt="">
+                    <div class="text">Continue grilling until cheese is melted.</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <div class="navigation">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="inner-container2">
+            <h2>Drag and Drop Option 1</h2>
+            <h3>Place the steps in the correct order</h3>
+            <div id="drag-drop-container">
+
+            </div>
+            <button type="button" onclick="reloadPage()">Go Again</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="inner-container2">
+            <h2>Drag and Drop Option 2</h2>
+            <h3>Move the correct image to the hot spot</h3>
+            <div class="option2">
+                <div id="target" class="image-container">
+                    <span>Instruction :</span>
+                    <div id="drop-item1" class="drop-box-display no-grab">
+                        Place skillet on stove.</div>
+                    <span>⬇ Place image in the hot spot below ⬇</span>
+                    <div id="drop-item2" ondrop="drop_handler(event)" ondragover="dragover_handler(event)"
+                        ondragstart="dragstart_handler(event)" class="drop-box no-grab">Place image here</div>
+                </div>
+                <div id="drag-and-drop-container2" class="image-container">
+
+                </div>
+                <button type="button" onclick="reloadPage()">Go Again</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <span>Attila Bordán
+            <script>document.write(new Date().getFullYear())</script>
+        </span>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>

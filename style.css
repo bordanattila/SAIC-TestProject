@@ -1,0 +1,338 @@
+:root {
+    --textColour: #030909;
+    --backgroundColour: #FFFBF3;
+    --headerColour: #5998A3;
+}
+
+body {
+    background-color: var(--backgroundColour);
+}
+
+header {
+    color: var(--textColour);
+    background-color: var(--headerColour);
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+    background-color: var(--headerColour);
+}
+
+i {
+    color: var(--textColour);
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2,
+h3 {
+    background-color: var(--headerColour);
+    text-align: center;
+}
+
+button {
+    background-color: var(--headerColour);
+    width: 110px;
+    height: 40px;
+}
+
+img.drag-item {
+    width: 20%;
+    height: auto;
+}
+
+form {
+    padding-left: 15px;
+}
+
+#target {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    min-height: 100px;
+    align-items: center;
+}
+
+#drag-and-drop-container2 {
+    margin-bottom: 10px;
+}
+
+#drag-drop-container {
+    margin-bottom: 20px;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: var(--textColour);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Hover effect for next and previous button */
+.prev:hover,
+.next:hover {
+    background-color: var(--headerColour);
+    border-radius: 5px;
+}
+
+.slide-show {
+    text-align: center;
+}
+
+/* Number text (1/3) */
+.number-text {
+    color: var(--textColour);
+    font-size: 12px;
+    padding: 8px 12px;
+    top: 0;
+    text-align: center;
+}
+
+/* The navigation indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--headerColour);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.navigation,
+.draggable {
+    text-align: center;
+}
+
+.draggable {
+    margin-left: auto;
+    margin-right: auto;
+    height: 3rem;
+    ;
+}
+
+/* Hover effect for navigation indicator */
+.active,
+.dot:hover {
+    background-color: var(--textColour);
+}
+
+/* Fading animation when slide changes*/
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+
+.drag-item {
+    background-color: var(--backgroundColour);
+    border: 1px solid var(--textColour);
+    border-radius: 4px;
+    padding: 10px;
+    cursor:grab;
+    width: 25%;
+}
+
+.drop-box-display {
+    background-color: var(--textColour);
+    border: 1px solid var(--textColour);
+    border-radius: 4px;
+    padding: 10px;
+    cursor: grab;
+    text-align: center;
+    color: var(--backgroundColour);
+}
+
+.drop-box {
+    background-color: var(--backgroundColour);
+    border: 1px solid var(--textColour);
+    border-radius: 4px;
+    padding: 10px;
+    cursor: grab;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+}
+
+.after-drag-item {
+    background-color: var(--backgroundColour);
+    border: 1px solid var(--textColour);
+    border-radius: 4px;
+    cursor: grab;
+    width: 25%;
+}
+
+.drop-box>img {
+    width: 100%;
+    height: auto;
+}
+
+.inner-container {
+    margin: 0 5px 20px;
+    padding: 20px;
+    text-align: center;
+    border: solid 1px var(--textColour);
+    border-radius: 10px;
+}
+
+.inner-container2 {
+    margin: 0 5px 20px;
+    padding: 20px;
+    text-align: center;
+    border: solid 1px var(--textColour);
+    border-radius: 10px;
+}
+
+.no-grab {
+    cursor: default !important;
+}
+
+/* Classes for user feedback */
+.good {
+    background-color: var(--headerColour);
+}
+
+.right {
+    background-color: var(--headerColour);
+}
+
+/* Media queries */
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media screen and (max-width:900px) {
+
+    img {
+        margin-bottom: 20px;
+    }
+
+    img.drag-item {
+        width: 27% !important;
+        height: auto;
+    }
+
+    /* Caption text */
+    .text {
+        color: var(--textColour);
+        font-size: 17px;
+        padding: 8px 12px;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .image-container {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+
+    .option2 {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .inner-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(88% - 10px);
+    }
+
+    .align-start {
+        text-align: start !important;
+    }
+}
+
+@media screen and (min-width:900px) {
+
+    form {
+        padding-left: 100px;
+    }
+
+    /* Caption text */
+    .text {
+        color: var(--backgroundColour);
+        font-size: 17px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        white-space: pre-line;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+
+    .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 55rem;
+        gap: 2px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+
+    .inner-container {
+        width: calc(47% - 10px) !important;
+        margin: 0 5px 20px;
+        padding: 20px;
+        text-align: center;
+        border: solid 1px var(--textColour);
+        border-radius: 10px;
+    }
+
+    .draggable {
+        width: 35rem;
+        cursor: grab;
+    }
+
+    .align-start {
+        text-align: start !important;
+    }
+
+}
